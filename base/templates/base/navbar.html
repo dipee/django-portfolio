@@ -1,4 +1,5 @@
 {% load static %}
+
 <header
   class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 bg-white"
 >
@@ -8,19 +9,23 @@
       alt="Logo"
       class="w-12 h-12 mr-4 rounded-full"
     />
-    <span class="text-2xl font-bold tracking-wider text-dark-fade"
+    <span
+      class="text-2xl font-bold tracking-wider text-dark-fade max-md:hidden"
+      id="logo-text"
       >Dipendra Nath</span
     >
   </div>
   <nav>
-    <ul class="flex space-x-4 text-l font-bold text-dark-fade tracking-wide">
-      <li><a href="#" class="hover:text-orange-fade">Home</a></li>
-      <li><a href="#" class="hover:text-orange-fade">About</a></li>
+    <ul
+      class="flex space-x-6 text-l font-bold text-dark-fade tracking-wide max-md:text-sm"
+    >
+      <li><a href="#" class="nav-link hover:text-orange-fade">Home</a></li>
+      <li><a href="#" class="nav-link hover:text-orange-fade">About</a></li>
       <li>
-        <a href="#" class="hover:text-orange-fade">Projects</a>
+        <a href="#" class="nav-link hover:text-orange-fade">Projects</a>
       </li>
       <li>
-        <a href="#" class="hover:text-orange-fade">Contact</a>
+        <a href="#" class="nav-link hover:text-orange-fade">Contact</a>
       </li>
     </ul>
   </nav>
