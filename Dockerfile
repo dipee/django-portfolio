@@ -9,8 +9,8 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /usr/src/app
 
 # Install dependencies
-COPY Pipfile Pipfile.lock /usr/src/app/
-RUN pip install pipenv && pipenv install --system
+COPY requirements.txt /usr/src/app/
+RUN pip install -r requirements.txt
 
 # Copy project
 COPY . /usr/src/app/
