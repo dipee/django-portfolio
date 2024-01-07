@@ -2,7 +2,7 @@ local-cdn/
 env/
 node_modules/
 .env
-
+.idea
 # Django #
 *.log
 *.pot
