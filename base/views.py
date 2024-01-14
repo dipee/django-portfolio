@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from .models import Profile
 # Create your views here.
 def home(request):
-    profile = Profile.objects.first()
-    return render(request, 'base/home.html', {'profile': profile})
+    user_profile = Profile.objects.first()
+    return render(request, 'base/home.html', {'profile': user_profile})
 
 def posts(request):
     return render(request, 'base/posts.html')

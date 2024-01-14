@@ -3,6 +3,7 @@ env/
 node_modules/
 .env
 .idea
+ec2-docker
 # Django #
 *.log
 *.pot

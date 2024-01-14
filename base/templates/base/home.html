@@ -4,15 +4,15 @@
   id="home"
   class="relative flex items-center justify-center h-screen bg-gery-fade text-dark-fade"
 >
-  <div class="text-center">
+  <div class="text-center flex flex-col flex-nowrap">
     <h1 class="text-6xl font-extrabold mb-4 leading-none tracking-wide">
       HEY, I'M DIPENDRA NATH
     </h1>
-    <p class="mt-8 text-xl font-normal leading-7">
+    <p class="mt-8 text-xl font-normal leading-7 w-9/12 self-center">
       I am an experienced backend web developer specializing in Python (Django,
-      FastAPI, Flask) and Java (Spring Boot) <br />
+      FastAPI, Flask) and Java (Spring Boot)
       for creating scalable and secure server-side applications. With a
-      background in top tech companies and various projects,<br />
+      background in top tech companies and various projects,
       I excel in API development, database design, and service integration,
       focusing on writing clean, efficient, and testable code.
     </p>
@@ -23,11 +23,11 @@
     <a
       href="{{profile.resume.url}}"
       style="padding: 1.25rem 2.5rem"
-      class="bg-orange-fade rounded text-dark-fade font-bold hover:bg-dark-blue shadow"
+      target="_blank"
+      class="bg-orange-fade rounded text-dark-fade font-bold hover:bg-dark-blue shadow self-center"
       >Download Resume</a
     >
-  </div>
-  <div class="absolute bottom-10 animate-bounce">
+      <div class="absolute bottom-10 animate-bounce self-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -43,44 +43,48 @@
       ></path>
     </svg>
   </div>
+  </div>
+
 </div>
-<div id="about-me" class="h-screen bg-white text-dark-fade">
-  <h2
-    class="text-4xl font-extrabold mb-4 leading-none tracking-wide text-center"
-  >
-    About Me
-  </h2>
-  <p class="">
-    I am a software engineer specializing in backend web development. I have a
-    passion for creating scalable and secure server-side applications. I am a
-    quick learner and a team player who is always looking to learn new
-    technologies and improve my skills. I am currently looking for a full-time
-    position as a backend developer.
-  </p>
-  <div class="flex justify-between text-left">
-    <div id="knowme">
-      <h3>Get to Know Me!</h3>
-      <p>
-        I am a software engineer specializing in backend web development. I have
-        a passion for creating scalable and secure server-side applications. I
-        am a quick learner and a team player who is always looking to learn new
-        technologies and improve my skills. I am currently looking for a
-        full-time position as a backend developer.
+<div id="about-me" class="flex flex-col flex-nowrap  min-h-screen bg-white text-dark-fade">
+    <div class="flex flex-col text-left p-8 mb-8">
+         <h2
+        class="text-4xl font-extrabold mb-4 leading-none tracking-wide text-center">
+        About Me
+      </h2>
+      <p class="text-center w-9/12 self-center">
+        I am a software engineer specializing in backend web development. I have a
+        passion for creating scalable and secure server-side applications. I am a
+        quick learner and a team player who is always looking to learn new
+        technologies and improve my skills. I am currently looking for a full-time
+        position as a backend developer.
       </p>
     </div>
-    <div id="skills">
-      <h3>My skills</h3>
-      <ul>
-        <li>Python</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SQL</li>
-        <li>Git</li>
-      </ul>
+
+    <div class="flex flex-row justify-between text-left p-8">
+        <div id="knowme" class="w-1/2 pr-8">
+          <h3 class="text-2xl mb-4">Get to Know Me!</h3>
+          <p>
+            I am a software engineer specializing in backend web development. I have
+            a passion for creating scalable and secure server-side applications. I
+            am a quick learner and a team player who is always looking to learn new
+            technologies and improve my skills. I am currently looking for a
+            full-time position as a backend developer.
+          </p>
+        </div>
+        <div id="skills" class="w-1/2 pl-8">
+    <h3 class="text-2xl mb-4">My Skills</h3>
+    <ul class="grid grid-cols-2 gap-4">
+        <li class="skill-item">Python</li>
+        <li class="skill-item">Java</li>
+        <li class="skill-item">JavaScript</li>
+        <li class="skill-item">HTML</li>
+        <li class="skill-item">CSS</li>
+        <li class="skill-item">SQL</li>
+        <li class="skill-item">Git</li>
+    </ul>
+</div>
     </div>
-  </div>
 </div>
 
 {% endblock content %}
