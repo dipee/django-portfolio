@@ -1,0 +1,21 @@
+{%  load static %}
+<div class="leading-normal font-bold shadow-lg p-16 max-w-7xl text-left w-11/12 rounded-md mt-20 mx-auto bg-gery-fade">
+    <form method="post" class="contact__form">
+        {% csrf_token %}
+        <div class="">
+            <label class="contact__form-label" for="{{ form.name.id_for_label }}">Name</label>
+            {{ form.name }}
+        </div>
+        <div class="contact__form-field">
+            <label class="contact__form-label" for="{{ form.email.id_for_label }}">Email</label>
+            {{ form.email }}
+        </div>
+        <div class="contact__form-field">
+            <label class="contact__form-label" for="{{ form.message.id_for_label }}">Message</label>
+            {{ form.message }}
+        </div>
+        <button class="btn btn--theme contact__btn" type="submit">
+            Send
+        </button>
+    </form>
+</div>
