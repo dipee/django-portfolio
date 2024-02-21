@@ -2,12 +2,15 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 from .forms import ContactModelForm
-from .models import Profile
+from .models import Profile, Project
 # Create your views here.
 def home(request):
     user_profile = Profile.objects.first()
+    projects = Project.objects.all()
     user_form = ContactModelForm()
-    return render(request, 'base/home.html', {'profile': user_profile, 'form': user_form})
+    return render(request, 'base/home.html', {
+        'profile': user_profile, 'form': user_form, 'projects': projects
+    })
 
 def posts(request):
     return render(request, 'base/posts.html')
