@@ -24,3 +24,11 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Skill(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.JSONField(default=dict, blank=True, null=True)
+
+    def __str__(self):
+        return self.title
