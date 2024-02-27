@@ -1,33 +1,38 @@
 {% load static %}
 <script src="{% static 'js/hamburger.js' %}"></script>
 <header
-  class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 bg-white"
+        class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-6 bg-white"
 >
-  <div class="flex items-center">
-    <img
-      src="{% static 'images/profile.jpg' %}"
-      alt="Logo"
-      class="w-12 h-12 mr-4 rounded-full"
-    />
-    <span
-      class="text-2xl font-bold tracking-wider text-dark-fade uppercase max-md:hidden"
-      id="logo-text"
-      >Dipendra Nath</span
-    >
-  </div>
+    <div class="flex items-center">
+        <img
+                src="{% static 'images/profile.jpg' %}"
+                alt="Logo"
+                class="w-12 h-12 mr-4 rounded-full"
+        />
+        <span
+                class="text-2xl font-bold tracking-wider text-dark-fade uppercase max-md:hidden"
+                id="logo-text"
+        >Dipendra Nath</span
+        >
+    </div>
     <nav class="flex items-center justify-between flex-wrap p-6">
-  <div class="block lg:hidden">
-    <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-dark-fade border-dark-fade hover:text-orange-fade hover:border-orange-fade">
-      <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
-  <ul class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:space-x-6 text-l font-bold text-dark-fade tracking-wide uppercase hidden" id="nav-content">
-    <li><a href="#" class="nav-link hover:text-orange-fade">Home</a></li>
-    <li><a href="#" class="nav-link hover:text-orange-fade">About</a></li>
-    <li><a href="#" class="nav-link hover:text-orange-fade">Projects</a></li>
-    <li><a href="#" class="nav-link hover:text-orange-fade">Blogs</a></li>
-    <li><a href="#" class="nav-link hover:text-orange-fade">Contact</a></li>
-  </ul>
-</nav>
+        <div class="block lg:hidden">
+            <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-dark-fade border-dark-fade hover:text-orange-fade hover:border-orange-fade">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>
+                    Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                </svg>
+            </button>
+        </div>
+        <ul class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:space-x-6 text-l font-bold text-dark-fade tracking-wide uppercase hidden"
+            id="nav-content">
+            <li><a href="#home" class="nav-link hover:text-orange-fade">Home</a></li>
+            <li><a href="#about-me" class="nav-link hover:text-orange-fade">About</a></li>
+            <li><a href="#projects" class="nav-link hover:text-orange-fade">Projects</a></li>
+            <li><a href="#" class="nav-link hover:text-orange-fade">Blogs</a></li>
+            <li><a href="#contact" class="nav-link hover:text-orange-fade">Contact</a></li>
+        </ul>
+    </nav>
 
 </header>
