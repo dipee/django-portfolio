@@ -11,4 +11,7 @@
   .skill-item:hover {
     @apply bg-gray-300; /* Change background color on hover if needed */
   }
+    .submit-button {
+        @apply bg-gray-500 hover:bg-orange-fade text-white font-bold py-2 px-4 rounded-full mt-4
+    }
 }
