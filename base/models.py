@@ -1,13 +1,21 @@
 from django.db import models
 
-class Profile(models.Model):
+class Base(models.Model):
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+
+    class Meta:
+        abstract = True
+
+class Profile(Base):
     title = models.CharField(max_length=100)
     description = models.TextField()
     resume = models.FileField(upload_to='files/resume/')
     image = models.ImageField(upload_to='images/profile/')
 
     
-class Project(models.Model):
+class Project(Base):
     title = models.CharField(max_length=100)
     description = models.TextField()
     image = models.ImageField(upload_to='images/project/')
@@ -17,7 +25,7 @@ class Project(models.Model):
         return self.title
 
 
-class Contact(models.Model):
+class Contact(Base):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     message = models.TextField()
@@ -26,7 +34,7 @@ class Contact(models.Model):
         return self.name
 
 
-class Skill(models.Model):
+class Skill(Base):
     title = models.CharField(max_length=100)
     description = models.JSONField(default=dict, blank=True, null=True)
 
