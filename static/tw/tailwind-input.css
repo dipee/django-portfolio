@@ -14,4 +14,23 @@
     .submit-button {
         @apply bg-gray-500 hover:bg-orange-fade text-white font-bold py-2 px-4 rounded-full mt-4
     }
+
+    #toast {
+        @apply fixed top-0 right-0 bg-green-500 text-white p-4 rounded-lg z-50 transition-all duration-500 ease-in-out;
+    }
+
+    #toast.show {
+        @apply block;
+        animation: slide 0.5s, fadeout 2.5s 0.5s;
+    }
+
+    @keyframes slide {
+        0% { @apply -translate-y-full; }
+        100% { @apply translate-y-0; }
+    }
+
+    @keyframes fadeout {
+        from { @apply opacity-100; }
+        to { @apply opacity-0; }
+    }
 }

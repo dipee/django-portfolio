@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 from .forms import ContactModelForm
 from .models import Profile, Project, Skill
@@ -13,6 +13,14 @@ def home(request):
         'profile': user_profile, 'form': user_form, 'projects': projects, 'skills': skills
     })
 
+def contact(request):
+    if request.method == 'POST':
+        form = ContactModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+        return JsonResponse({"message": f"Thank you {form.cleaned_data.get("name")} for your message."})
+    return JsonResponse({"message": "Error saving message."})
 def posts(request):
     return render(request, 'base/posts.html')
 
@@ -21,13 +29,3 @@ def post(request):
 
 def profile(request):
     return render(request, 'base/profile.html')
-
-
-
-
-def contact(request):
-    if request.method == 'POST':
-        form = ContactModelForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('/thanks/')

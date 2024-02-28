@@ -6,7 +6,7 @@
       </h2>
     <div class="w-8 h-1 bg-orange-fade mx-auto mt-3 mb-3"></div>
 <div class="leading-normal font-bold shadow-lg p-16 max-w-7xl text-left w-11/12 rounded-md mt-20 mx-auto bg-gery-fade">
-    <form method="post" class="contact__form">
+    <form method="post" class="contact__form" id="contact-form">
         {% csrf_token %}
         <div class="">
             <label class="contact__form-label" for="{{ form.name.id_for_label }}">Name</label>
@@ -20,9 +20,10 @@
             <label class="contact__form-label" for="{{ form.message.id_for_label }}">Message</label>
             {{ form.message }}
         </div>
-        <button class="submit-button">
+        <button class="submit-button" type="submit">
   Button
 </button>
     </form>
+    <div id="toast" style="display: none;">Toast message</div>
 </div>
     </div>
