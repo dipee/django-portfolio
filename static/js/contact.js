@@ -6,9 +6,10 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     })
     .then(response => response.json())
     .then(data => {
-        const toast = document.getElementById('toast');
+        var toast = document.getElementById('toast');
+        console.log(data.message)
         toast.innerText = data.message;
         toast.className = 'show';
-        setTimeout(function(){ toast.className = toast.className.replace('show', ''); }, 3000);
+        setTimeout(function(){ toast.className = toast.className.replace('show', 'hide'); }, 3000);
     });
 });

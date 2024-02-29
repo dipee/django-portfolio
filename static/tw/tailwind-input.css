@@ -18,7 +18,9 @@
     #toast {
         @apply fixed top-0 right-0 bg-green-500 text-white p-4 rounded-lg z-50 transition-all duration-500 ease-in-out;
     }
-
+    #toast.hide{
+        @apply hidden;
+    }
     #toast.show {
         @apply block;
         animation: slide 0.5s, fadeout 2.5s 0.5s;
