@@ -36,7 +36,7 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 print(BASE_DIR)
 # Application definition
 THIRD_PARTY_APPS = [
-
+'fontawesomefree'
 ]
 
 INSTALLED_APPS = [

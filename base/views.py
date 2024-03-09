@@ -3,7 +3,7 @@ from django.http import JsonResponse
 
 from .forms import ContactModelForm
 from .models import Profile, Project, Skill
-# Create your views here.
+
 def home(request):
     user_profile = Profile.objects.first()
     projects = Project.objects.all()
@@ -21,6 +21,7 @@ def contact(request):
 
         return JsonResponse({"message": f"Thank you {form.cleaned_data.get("name")} for your message."})
     return JsonResponse({"message": "Error saving message."})
+
 def posts(request):
     return render(request, 'base/posts.html')
 
